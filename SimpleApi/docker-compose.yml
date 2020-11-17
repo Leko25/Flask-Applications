@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    simple-restful-api:
+        build: ./simple-restful-api
+        ports:
+            - "5000:5000"
+        links:
+            - simple-restful-db
+    simple-restful-db:
+        build: ./simple-restful-db
